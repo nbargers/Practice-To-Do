@@ -9,11 +9,12 @@ const PORT = 3000;
 //Handle parsing request
 
 app.use(express.json());
-
 //Serve files
 
+app.use(express.static(__dirname + '/client'));
+
 app.get("/", (req,res) => {
-  res.sendFile(path.join(__dirname, './index.html'))
+  res.sendFile(path.join(__dirname, './client/index.html'))
 })
 
 //Routes

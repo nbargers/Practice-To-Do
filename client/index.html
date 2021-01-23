@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" />
+    <title>Practice-To-DO</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+  <body onload = getTasks()>
+      <h1 id="root">To-Do!</h1>
+
+      <div id="Task Creator" class= "Creator">
+          <input type="text" id="task" class="task" placeholder="Task"><br>
+          <input type="date" id="due" class="due" required pattern="\d{4}-\d{2}-\d{2} placeholder="Due Date"><br>
+          <input type="button" value = "Create Task" onclick = createTask()>
+      </div>
+      <h4>Tasks</h4>
+      <div id ="Task List" class= "Task List">
+
+
+      </div>
+      
+   <script src="main.js"></script>
+  </body>
+</html>

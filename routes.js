@@ -12,7 +12,7 @@ route.post('/', taskController.createTask, (req, res) => {
 })
 
 route.put('/', taskController.updateTask, (req, res) => {
-  res.status(200).json({task: res.locals.task})
+  res.status(200).json({message: "Task Updated"})
 })
 
 route.delete('/', taskController.deleteTask, (req, res) => {

@@ -58,12 +58,8 @@ taskController.updateTask = async (req, res, next) => {
     const query = 'UPDATE tasks SET title = $1, due =$2 WHERE id =$3 RETURNING *';
     const task = await pool.query(query, [title, due, id]);
 
-    const {rows, rowCount} = task
-
-    if (rowCount){
-      res.locals.task = rows[0]
-      next()
-    }
+    next()
+  
   } catch (error) {
     next ({
       log: `taskController.updateTask: ${error}`,
